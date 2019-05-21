@@ -1,0 +1,27 @@
+doctype html
+html(lang='es')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0')
+        link(rel="stylesheet", href="css/normalize.css")
+        link(rel="stylesheet", href="css/styles.css")
+    body
+        .main-content
+            .avengers
+                .avengers__circle
+                .avengers__left
+                .avengers__arrow
+                .avengers__right
+            #location.location
+                img(data-country="es", src="img/spain.png")
+                img(data-country="usa", src="img/usa.png")
+            #countdown.countdown
+                #days.countdown__number
+                #hours.countdown__number
+                #minutes.countdown__number
+                #seconds.countdown__number
+                span.countdown__text DAYS
+                span.countdown__text HRS
+                span.countdown__text MINS
+                span.countdown__text SECS
+        script(src="js/scripts.min.js?v2")

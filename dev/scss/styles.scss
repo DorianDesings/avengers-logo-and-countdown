@@ -1,0 +1,120 @@
+body {
+    font-family: sans-serif;
+}
+
+.main-content {
+    width: 100%;
+    min-height: 60vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0, 0 100%, 100% 95%, 100% 0);
+}
+
+.avengers {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__circle {
+        position: relative;
+        width: 70%;
+        height: 70%;
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            background: #000;
+        }
+        &::before {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+        }
+        &::after {
+            width: 100px;
+            height: 100px;
+            top: 350px;
+            left: 50px;
+            transform: rotate(25deg);
+        }
+    }
+    &__left {
+        position: absolute;
+        width: 350px;
+        height: 600px;
+        top: 0;
+        left: 120px;
+        background: #fff;
+        clip-path: polygon(75% 7%, 100% 7%, 23% 100%, 0% 100%);
+    }
+    &__arrow {
+        position: absolute;
+        width: 225px;
+        height: 150px;
+        top: 325px;
+        left: 250px;
+        background: #fff;
+        clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+        z-index: 100;
+    }
+    &__right {
+        position: absolute;
+        width: 90px;
+        height: 450px;
+        background: #fff;
+        top: 42px;
+        left: 385px;
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            background: #000;
+            width: 225px;
+            height: 190px;
+            top: 264px;
+            left: -115px;
+            clip-path: polygon(100% 50%, 50% 0, 50% 100%);
+        }
+    }
+}
+
+.location {
+    width: 50%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2em;
+    & img {
+        display: block;
+        width: 20%;
+        cursor: pointer;
+    }
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px 40px;
+    margin-bottom: 5em;
+    justify-items: center;
+    color: #fff;
+    &__number {
+        font-size: 4em;
+    }
+    &__text {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
